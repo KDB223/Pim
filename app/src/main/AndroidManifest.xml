@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kdb.pim">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".Pim"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activities.ImageActivity"
+            android:theme="@style/AppThemeImage" />
+        <activity android:name=".ui.activities.ParticipantsActivity" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/msg_notification_channel_id" />
+
+        <receiver android:name=".receivers.ReplyReceiver" />
+
+        <service
+            android:name=".services.PimMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".ui.activities.ContactsActivity" />
+        <activity
+            android:name=".ui.activities.StatusChangeActivity"
+            android:parentActivityName=".ui.activities.AccountActivity" />
+        <activity android:name=".ui.activities.AccountActivity" />
+        <activity
+            android:name=".ui.activities.RegisterActivity"
+            android:parentActivityName=".ui.activities.LoginActivity" />
+        <activity android:name=".ui.activities.LoginActivity" />
+        <activity android:name=".ui.activities.ChatActivity" />
+        <activity android:name=".ui.activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>

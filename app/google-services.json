@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "123691046211",
+    "firebase_url": "https://productiveim-e40d4.firebaseio.com",
+    "project_id": "productiveim-e40d4",
+    "storage_bucket": "productiveim-e40d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123691046211:android:667355dbbc8a81eebacbf6",
+        "android_client_info": {
+          "package_name": "com.kdb.pim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123691046211-0pluutbds0mepe032gsb8khfvng77gja.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kdb.pim",
+            "certificate_hash": "519255fb9081d8975a270f8e854a5c816550991b"
+          }
+        },
+        {
+          "client_id": "123691046211-b4eq8k1q6a9mts7kpu63103v14v60a29.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7C373ZveS-NP_kTLnc0wJrDT-Z2oVP5U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123691046211-b4eq8k1q6a9mts7kpu63103v14v60a29.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

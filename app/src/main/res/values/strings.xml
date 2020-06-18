@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Pim</string>
+    <string name="msg_distracting">This message may contain distracting content and has been hidden. Tap and hold to view anyway.</string>
+    <string name="msg_distracting_italics"><i>This message may contain distracting content and has been hidden. Tap and hold to view anyway.</i></string>
+    <string name="default_status">Available</string>
+    <string name="online">online</string>
+    <string name="label_typing">typing…</string>
+    <string name="label_group_typing">%s is typing…</string>
+    <string name="label_group_members">%s, </string>
+    <string name="warning_distracting_flagged">This message contains distracting content and has been hidden</string>
+    <string name="warning_distracting_unflagged">This message was seen</string>
+    <string name="msg_notification_channel_id">messages</string>
+</resources>

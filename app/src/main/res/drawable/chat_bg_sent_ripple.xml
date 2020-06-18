@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?colorControlHighlight">
+    <item>
+        <shape>
+            <corners
+                android:radius="12dp"
+                android:topRightRadius="2dp" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/chat_bg_sent" />
+</ripple>

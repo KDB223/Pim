@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/main_new_grp"
+        android:title="New group" />
+    <item
+        android:id="@+id/main_account"
+        android:title="Account" />
+    <item
+        android:id="@+id/main_log_out"
+        android:title="Log out" />
+    <item
+        android:id="@+id/main_debug"
+        android:title="Debug" />
+</menu>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.activities.AccountActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:elevation="0dp"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:title="Profile">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/image_debug"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="24dp"
+        android:background="?attr/selectableItemBackground"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        app:srcCompat="@drawable/chat_default_profile"
+        tools:srcCompat="@drawable/chat_default_profile" />
+    <FrameLayout
+        android:id="@+id/frame_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/loading_bg_circle"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/image_debug"
+        app:layout_constraintEnd_toEndOf="@+id/image_debug"
+        app:layout_constraintStart_toStartOf="@+id/image_debug"
+        app:layout_constraintTop_toTopOf="@+id/image_debug"
+        tools:visibility="gone" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/image_debug"
+        app:layout_constraintEnd_toEndOf="@+id/image_debug"
+        app:layout_constraintStart_toStartOf="@+id/image_debug"
+        app:layout_constraintTop_toTopOf="@+id/image_debug"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textColor="@android:color/primary_text_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_debug"
+        tools:text="Namey McNameson" />
+
+    <TextView
+        android:id="@+id/account_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+        android:textColor="@android:color/primary_text_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_name"
+        tools:text="Available" />
+
+    <Button
+        android:id="@+id/button_image_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Change Profile Photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_status" />
+
+    <Button
+        android:id="@+id/button_status_change"
+        style="@style/ButtonSecondary"
+        app:backgroundTint="#FFF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="?selectableItemBackground"
+        android:text="Change Status"
+        app:layout_constraintEnd_toEndOf="@+id/button_image_change"
+        app:layout_constraintStart_toStartOf="@+id/button_image_change"
+        app:layout_constraintTop_toBottomOf="@+id/button_image_change" />
+</androidx.constraintlayout.widget.ConstraintLayout>
