@@ -4,9 +4,12 @@ from firebase_admin import credentials, db
 
 import model
 
-cred = credentials.Certificate('./ServiceAccountKey.json')
+# Replace with your key
+PATH_TO_SAC_KEY = './ServiceAccountKey.json'
 
-sac = open('./ServiceAccountKey.json', 'r')
+cred = credentials.Certificate(PATH_TO_SAC_KEY)
+
+sac = open(PATH_TO_SAC_KEY, 'r')
 project_id = json.load(sac)["project_id"]
 
 pim_app = firebase_admin.initialize_app(cred, {
@@ -14,7 +17,7 @@ pim_app = firebase_admin.initialize_app(cred, {
 })
 ref = db.reference('rooms')
 
-
+# Callback function called by model.py after performing inference
 def on_result(path, distacting):
     if distacting:
         print('Content is distracting. Updating db...')
@@ -23,7 +26,7 @@ def on_result(path, distacting):
     else:
         print('Not distracting')
 
-
+# Listener function, invoked when database is written to
 def msg_listener(event):
     print('Listener fired')
     if not isinstance(event.data, bool):
