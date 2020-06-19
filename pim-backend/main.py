@@ -1,5 +1,3 @@
-import threading
-
 import firebase_admin
 from firebase_admin import credentials, db
 
@@ -30,13 +28,6 @@ def msg_listener(event):
                 print('Found ' + content)
                 print('Checking...')
                 model.is_distracting(content, event.path, on_result)
-                # threading.Thread(target=model.is_distracting, args=(content, event.path, on_result,))
-                # if model.is_distracting(content, event.path, on_result):
-                #    print('Content is distracting. Updating db...')
-                #    db.reference('rooms' + event.path).child('distracting').set(True)
-                #    print('Updated ' + event.path)
-                # else:
-                #    print('Not distracting')
         except Exception as e:
             print(e.args)
             print(e)
