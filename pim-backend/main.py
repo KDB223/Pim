@@ -1,11 +1,16 @@
 import firebase_admin
+import json
 from firebase_admin import credentials, db
 
 import model
 
 cred = credentials.Certificate('./ServiceAccountKey.json')
+
+sac = open('./ServiceAccountKey.json', 'r')
+project_id = json.load(sac)["project_id"]
+
 pim_app = firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://productiveim-e40d4.firebaseio.com/'
+    'databaseURL': 'https://' + project_id + '.firebaseio.com/'
 })
 ref = db.reference('rooms')
 
